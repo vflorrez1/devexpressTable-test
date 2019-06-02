@@ -7,6 +7,10 @@ import {
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
 
+interface Props {
+  title: string;
+}
+
 const useStyles = makeStyles({
   tableTitleContainer: {
     flex: 1,
@@ -19,7 +23,7 @@ const useStyles = makeStyles({
 
 const pluginDependencies = [{ name: "Toolbar" }];
 
-const ToolbarFilter = () => {
+const ToolbarFilter = (props: Props) => {
   const classes = useStyles();
   return (
     <Plugin
@@ -29,7 +33,7 @@ const ToolbarFilter = () => {
           <TemplatePlaceholder />
           <div className={classes.tableTitleContainer}>
             <Typography variant="h5" component="h2">
-              Logging Table
+              {props.title}
             </Typography>
           </div>
         </Template>

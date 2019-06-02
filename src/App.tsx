@@ -45,7 +45,7 @@ const App: React.FC = () => {
           <TableColumnVisibility />
           <Toolbar />
           <SearchPanel />
-          <TableTitle />
+          <TableTitle title={"Logging Table"} />
           <FilterButton toggleFilterButton={filterButtonHandler} />
           <ColumnChooser />
         </Grid>
